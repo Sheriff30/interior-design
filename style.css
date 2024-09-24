@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -12,6 +13,7 @@ body {
   font-size: 2rem;
   font-family: "Poppins", system-ui;
   position: relative;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -39,10 +41,10 @@ body {
 }
 
 :root {
-  --white: #fff;
-  --white-smoke: #f6f6f6;
-  --black: #000;
-  --brown: rgb(138, 124, 86);
+  --color-primary: #ffcd11;
+  --color-secondary: #000000;
+  --color-black: #000000;
+  --color-white: #fff;
 }
 
 /* Section 1 background */
@@ -57,13 +59,12 @@ body {
 }
 
 .whitesmokebg {
-  background-color: var(--white-smoke);
+  background-color: #f6f6f6;
 }
 
 h1 {
   font-size: 6rem;
   text-align: center;
-  color: var(--white);
   font-family: "Lato", sans-serif;
   font-weight: 500;
 }
@@ -79,6 +80,7 @@ h2 {
 
 .header-container {
   transition: 0.3s all ease-in-out;
+  background-color: var(--color-black);
 }
 
 .header {
@@ -88,24 +90,6 @@ h2 {
   align-items: center;
   padding: 1rem 0;
   max-width: 112rem;
-  color: var(--white);
-}
-
-.testimonial-page .header .logo {
-  color: var(--black) !important;
-}
-.portfolio-page .header .logo {
-  color: var(--black) !important;
-}
-.portfolio-page .header .menubar {
-  color: var(--black) !important;
-}
-
-.header-container:hover {
-  background-color: var(--white);
-}
-.header-container:hover .header {
-  color: var(--black);
 }
 
 .logo {
@@ -113,12 +97,14 @@ h2 {
   font-weight: 600;
   color: inherit;
   text-decoration: none;
+  color: var(--color-primary);
 }
 
 .menubar-icon {
   font-size: 4rem;
   cursor: pointer;
   display: flex;
+  color: var(--color-primary);
 }
 
 /* Hero Section */
@@ -138,6 +124,10 @@ h2 {
   gap: 4rem;
 }
 
+.hero-section-text h1 {
+  color: var(--color-white);
+}
+
 .btn {
   padding: 2rem 4rem;
   border-radius: 10px;
@@ -149,23 +139,13 @@ h2 {
 }
 
 .btn-primary {
-  background-color: var(--white);
+  background-color: var(--color-primary);
   color: var(--black);
 }
 .btn-secondary {
-  background-color: var(--brown);
+  background-color: var(--color-primary);
   color: var(--white);
   border: 1px solid transparent;
-}
-
-.btn-primary:hover {
-  background-color: var(--brown);
-  color: var(--white);
-}
-.btn-secondary:hover {
-  background-color: var(--white);
-  color: var(--brown);
-  border: 1px solid var(--brown);
 }
 
 /* Help section */
@@ -271,7 +251,7 @@ h2 {
 }
 
 .active-btn {
-  border-bottom: 2px solid var(--brown);
+  border-bottom: 3px solid var(--color-primary);
   font-weight: 600;
 }
 
@@ -376,7 +356,7 @@ h2 {
 }
 
 .close-icon {
-  color: var(--white-smoke);
+  color: var(--color-primary);
   font-size: 4rem;
 }
 
@@ -388,13 +368,13 @@ h2 {
 }
 
 .sidebar ul li {
-  border-bottom: 1px solid var(--white-smoke);
+  border-bottom: 1px solid var(--color-black);
   padding: 1rem 0;
 }
 
 .sidebar ul li a {
   text-decoration: none;
-  color: var(--white-smoke);
+  color: var(--color-primary);
   text-transform: uppercase;
   transition: 0.4s all ease-in-out;
   display: block;
@@ -414,7 +394,7 @@ h2 {
 }
 
 .testimonial-page .header div {
-  color: var(--black);
+  color: var(--color-primary);
 }
 
 .test-card {
@@ -458,7 +438,7 @@ h2 {
 
 .testimonial-content h2 {
   margin-bottom: 8rem;
-  color: var(--white-smoke);
+  color: var(--color-white);
 }
 
 .portfolio-imgs {
@@ -478,7 +458,7 @@ h2 {
 }
 
 .portfolio-content {
-  background-color: var(--white-smoke);
+  background-color: var(--color-white);
 }
 
 .portfolio-content h2 {
@@ -530,7 +510,7 @@ h2 {
   font-size: 1.6rem;
   padding: 2rem;
   border-radius: 10px;
-  border: 1px solid var(--brown);
+  border: 1px solid var(--color-primary);
 }
 
 .input-group input::placeholder {
@@ -542,6 +522,51 @@ form {
   width: 100%;
   gap: 3rem;
   margin-top: 6rem;
+}
+
+footer {
+  background-color: var(--color-black);
+  padding: 2rem 4rem 4rem 4rem;
+}
+
+footer .section {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .logo {
+  color: var(--color-primary);
+}
+.footer-nav {
+  display: flex;
+  gap: 2rem;
+}
+.footer-nav a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.p-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-white);
+  border: var(--color-black) 1px solid;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+
+.p-btn:hover {
+  background-color: var(--color-primary);
 }
 
 /* Responsive */
