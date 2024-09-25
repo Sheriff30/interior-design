@@ -492,6 +492,7 @@ h2 {
 
 .form-heading {
   font-size: 3rem;
+  color: var(--color-primary);
   font-weight: bold;
 }
 
@@ -525,25 +526,54 @@ form {
 }
 
 footer {
-  background-color: var(--color-black);
+  background-color: var(--color-primary);
   padding: 2rem 4rem 4rem 4rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-content p {
+  font-size: 1.4rem;
+  max-width: 550px;
 }
 
 footer .section {
   display: flex;
+  gap: 2rem;
   justify-content: space-between;
 }
-
 footer .logo {
-  color: var(--color-primary);
+  color: var(--color-black);
 }
+.footer-nav .nav-links {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.8rem;
+}
+.footer-nav .nav-links a {
+  color: var(--color-black);
+  text-decoration: none;
+}
+
 .footer-nav {
+  display: grid;
+  gap: 2rem;
+}
+
+.nav-social {
   display: flex;
   gap: 2rem;
 }
-.footer-nav a {
-  color: var(--color-primary);
-  text-decoration: none;
+
+.fb-icon,
+.insta-icon,
+.youtube-icon {
+  font-size: 3rem;
+  color: var(--color-black);
 }
 
 .pagination {
@@ -567,6 +597,16 @@ footer .logo {
 
 .p-btn:hover {
   background-color: var(--color-primary);
+}
+
+.register-link {
+  width: 100%;
+  text-align: center;
+}
+
+.register-link a {
+  color: var(--color-primary);
+  font-weight: bold;
 }
 
 /* Responsive */
@@ -619,6 +659,10 @@ footer .logo {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+  }
+
+  footer .section {
+    flex-direction: column;
   }
 }
 
